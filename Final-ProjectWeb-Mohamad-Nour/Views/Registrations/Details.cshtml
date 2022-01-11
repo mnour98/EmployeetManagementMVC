@@ -1,0 +1,74 @@
+﻿@model Final_ProjectWeb_Mohamad_Nour.Models.registration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>registration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identification_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identification_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobile_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobile_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.group.group_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.group.group_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.position)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

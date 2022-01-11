@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Final_ProjectWeb_Mohamad_Nour.Models.group>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Add a new group</h2>
+
+<p>
+    @Html.ActionLink("New group", "Create", null, new { @class = "btn btn-info" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.group_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.year)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.group_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.year)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-success" })|
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model Final_ProjectWeb_Mohamad_Nour.Models.registration
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>registration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identification_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identification_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobile_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobile_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.group.group_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.group.group_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.position)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
